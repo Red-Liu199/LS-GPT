@@ -3,6 +3,14 @@
 * python=3.6
 * pytorch=1.2.0
 * trasformers=3.5.1
+## Dataset
+Before training and evaluation, you need to extract the dataset from zip files:
+```
+unzip data.zip
+unzip db.zip
+unzip extra_data.zip
+unzip extra_db.zip
+```
 ## Training
 Supervised training over all data (labeled) in MultiWOZ:
 ```
@@ -30,6 +38,7 @@ bash train_ST_aug.sh
 ```
 bash train_VL_aug.sh
 ```
+
 ## Evaluation 
 To test the performance of your model on the test set of MultiWOZ:
 ```
