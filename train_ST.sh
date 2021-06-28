@@ -1,0 +1,21 @@
+# Copyright 2021 Tsinghua SPMI Lab, Author: Hong Liu
+# This script runs the Semi-ST (self training) experiment on MultiWOZ.
+# Before Semi-ST, make sure that you have pretrained your model on supervised data.
+# The model in path will be loaded as initialization model.
+# The proportion you choose must be consistent with that during pretraining stage.
+
+ratio = 20
+path = experiments_21/all_pre_${ratio}_act_sd11_lr0.0001_bs2_ga16/best_score_model
+exp_no = ST-${ratio}
+python train_semi.py\
+    -mode semi_ST\
+    -cfg  lr=1e-4\
+    gradient_accumulation_steps=16 batch_size=2\
+    epoch_num=50\
+    cuda_device=0\
+    gpt_path=$path\
+    data_aug=False\
+    model_act=True\
+    dataset=1\
+    spv_proportion=$ratio\
+    exp_no=$exp_no\
