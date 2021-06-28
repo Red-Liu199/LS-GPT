@@ -36,5 +36,5 @@ To test the performance of your model on the test set of MultiWOZ:
 bash test.sh
 ```
 
-* Note: You can change the parameters such as cuda_device in all the sh file to satisfy your requirement.
+* Note: Read those .sh files carefully. You can change the parameters such as cuda_device to satisfy your own need.
    
