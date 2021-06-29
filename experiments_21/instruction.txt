@@ -1,1 +1,1 @@
-You can download the checkpoint on 
+You can download the checkpoint here. The correct path format for GPT-2 is experiments_21/checkpoint_name/best_score_model.
