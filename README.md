@@ -19,7 +19,7 @@ bash train.sh
 ```
 ### Semi-supervised training with partial labeled data in MultiWOZ
 
-If you haven't pretrain the model on labeled data:
+If you haven't pretrained the model on labeled data:
 ```
 bash pretrain.sh
 ```
