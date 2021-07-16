@@ -12,7 +12,7 @@ unzip extra_data.zip
 unzip extra_db.zip
 ```
 ## Training
-* Note: All the `.sh` files contain comments. Read them carefully and you can change the parameters such as `cuda_device` and `spv_proportion` to satisfy your own need.
+* Note: All the `.sh` files contain comments. Read them carefully and you can change the parameters such as `cuda_device` , `spv_proportion` and `path` to satisfy your own need.
 ### Supervised training over all data in MultiWOZ:
 ```
 bash train.sh
@@ -55,7 +55,7 @@ We provide our SOTA models on https://pan.baidu.com/s/1MeFypGOwufAeLkUEQVqItQ ex
 
 The supervised baseline model is trained over MultiWOZ2.1, and the other two models (LS-GPT+Semi-VL and LS-GPT+Semi-ST) are trained over MultiWOZ2.1 and unlabeled dialogs from other datasets. 
 
-Download these checkpoints to experiments_21, and change the path in `test.sh`, then you can get results as follows:
+Download these checkpoints to experiments_21, and change the `path` in `test.sh`, then you can get results as follows:
 |Model|Inform|Success|BLEU|Combined|
 |-----|------|------|-----|--------|
 |baseline|90.19 |77.78 |15.59 |99.58|
